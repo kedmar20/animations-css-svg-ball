@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* no default styling for all inputs and button - to can edit all ourselves */
+input,
+button {
+   appearance: none;
+   border: none;
+   outline: none;
+   background: none;
+}
