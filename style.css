@@ -14,3 +14,54 @@ button {
    outline: none;
    background: none;
 }
+
+body {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+   color: rgb(36, 0, 70);
+   margin-bottom: 150px;
+}
+.ball-div {
+   height: 70%;
+   width: 100%;
+   background-color: aquamarine;
+}
+@keyframes ball {
+   from {
+      transform: rotateZ(0deg);
+   }
+   to {
+      transform: rotateZ(360deg);
+   }
+}
+@keyframes moveX {
+   from {
+      transform: translateX(0) translateY(0);
+   }
+   50% {
+      transform: translateX(90vw) translateY(85vh);
+   }
+   to {
+      transform: translateX(45vw) translateY(-5vh);
+   }
+}
+.ball-div svg {
+   height: 250px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   animation: moveX 3s linear infinite alternate;
+}
+
+#ball1 {
+   animation: ball 2s infinite linear;
+   transform-origin: center;
+   transform-box: fill-box;
+}
